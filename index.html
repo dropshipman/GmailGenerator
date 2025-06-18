@@ -192,7 +192,7 @@
                             <span>Hasilkan Alamat</span>
                         </button>
                     </div>
-
+          <!-- Tambahan subdomain -->  
                      <div class="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 mb-8">
                         <button
                             id="randomUsernameBtn"
@@ -337,6 +337,10 @@
             "fstudio.biz.id", "jaya@fstudio.biz.id", "freshgreen.my.id"
         ];
 
+        const customDomains2 = [
+            "fstudio.biz.id", "jaya@fstudio.biz.id", "freshgreen.my.id"
+        ];
+
         // Generate random string for username
         function generateRandomString(length) {
             const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -441,6 +445,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             populateDropdown('gmailDropdown', gmailUsernames);
             populateDropdown('customDomainDropdown', customDomains);
+            populateDropdown('customDomainDropdown', customDomains2);
             document.getElementById('customUsernameDisplay').textContent = generateRandomString(10);
 
             // Event listeners
