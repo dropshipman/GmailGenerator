@@ -206,7 +206,6 @@
                         <div id="customUsernameDisplay2" class="flex-1 p-4 border-2 border-gray-200 rounded-xl bg-gray-50 text-gray-700 w-full text-center font-mono text-lg font-medium break-all">
                             <!-- Random username will be displayed here -->
                         </div>
-                        
                         <select
                             id="customDomainDropdown2"
                             class="flex-1 p-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent shadow-sm text-gray-700 w-full bg-white hover:border-green-300 transition-colors duration-200"
@@ -214,7 +213,7 @@
                             <!-- Options will be populated by JavaScript -->
                         </select>
                         <button
-                            id="generateCustomBtn"
+                            id="generateCustomBtn2"
                             class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:scale-105 w-full lg:w-auto flex items-center justify-center space-x-2"
                         >
                             <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -477,6 +476,19 @@
             document.getElementById('generateCustomBtn').addEventListener('click', function() {
                 const customUsername = document.getElementById('customUsernameDisplay').textContent.trim();
                 const selectedDomain = document.getElementById('customDomainDropdown').value.trim();
+                
+                if (!customUsername || !selectedDomain) {
+                    showMessage("Silakan hasilkan nama pengguna acak DAN pilih domain kustom.");
+                    return;
+                }
+                
+                const results = generateEmailVariations(customUsername, selectedDomain);
+                renderEmailList('customResults', results);
+            });
+
+            document.getElementById('generateCustomBtn2').addEventListener('click', function() {
+                const customUsername = document.getElementById('customUsernameDisplay').textContent.trim();
+                const selectedDomain = document.getElementById('customDomainDropdown2').value.trim();
                 
                 if (!customUsername || !selectedDomain) {
                     showMessage("Silakan hasilkan nama pengguna acak DAN pilih domain kustom.");
