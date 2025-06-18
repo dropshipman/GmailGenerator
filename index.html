@@ -431,11 +431,6 @@
                 renderEmailList('customResults', []);
             });
 
-            document.getElementById('randomUsernameBtn2').addEventListener('click', function() {
-                document.getElementById('customUsernameDisplay2').textContent = generateRandomString(10);
-                renderEmailList('customResults', []);
-            });
-
             document.getElementById('generateCustomBtn').addEventListener('click', function() {
                 const customUsername = document.getElementById('customUsernameDisplay').textContent.trim();
                 const selectedDomain = document.getElementById('customDomainDropdown').value.trim();
