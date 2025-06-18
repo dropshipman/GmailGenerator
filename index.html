@@ -445,12 +445,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             populateDropdown('gmailDropdown', gmailUsernames);
             populateDropdown('customDomainDropdown', customDomains);
-            document.getElementById('customUsernameDisplay').textContent = generateRandomString(10);
-
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
-            populateDropdown('gmailDropdown', gmailUsernames);
             populateDropdown('customDomainDropdown2', customDomains2);
+            document.getElementById('customUsernameDisplay').textContent = generateRandomString(10);
             document.getElementById('customUsernameDisplay2').textContent = generateRandomString(10);
 
             // Event listeners
