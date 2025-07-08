@@ -326,16 +326,16 @@
                     return;
                 }
 
-                //generateDotCombinations(prefix + suffix[0], suffix.substring(1));
+                generateDotCombinations(prefix + suffix[0], suffix.substring(1));
 
-                //if (prefix.length > 0) {
-                    //generateDotCombinations(prefix + '.' + suffix[0], suffix.substring(1));
-                //}
-            //}
+                if (prefix.length > 0) {
+                    generateDotCombinations(prefix + suffix[0], suffix.substring(1));
+               }
+             }
 
-            //if (cleanUsername.length > 0) {
+            if (cleanUsername.length > 0) {
                 generateDotCombinations(cleanUsername[0], cleanUsername.substring(1));
-            //}
+            }
 
             return Array.from(generatedEmails).sort();
         }
