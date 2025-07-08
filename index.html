@@ -301,7 +301,7 @@
         ];
 
         const customDomains = [
-            "fstudio.biz.id", "edu.fstudio.biz.id", "jupiter.fstudio.biz.id", "mario.fstudio.biz.id", "sch.fstudio.biz.id", "jaya.fstudio.biz.id", "freshgreen.my.id"
+            "backtobag.shop"
         ];
 
       
@@ -316,29 +316,29 @@
         }
 
         // Generate email variations with dots
-        function generateEmailVariations(baseUsername, domain) {
-            const generatedEmails = new Set();
-            const cleanUsername = baseUsername.replace(/\./g, '').toLowerCase();
+       // function generateEmailVariations(baseUsername, domain) {
+           // const generatedEmails = new Set();
+          //  const cleanUsername = baseUsername.replace(/\./g, '').toLowerCase();
 
-            function generateDotCombinations(prefix, suffix) {
-                if (suffix.length === 0) {
-                    generatedEmails.add(`${prefix}@${domain}`);
-                    return;
-                }
+          //  function generateDotCombinations(prefix, suffix) {
+              //  if (suffix.length === 0) {
+              //      generatedEmails.add(`${prefix}@${domain}`);
+             //       return;
+             //   }
 
-                generateDotCombinations(prefix + suffix[0], suffix.substring(1));
+              //  generateDotCombinations(prefix + suffix[0], suffix.substring(1));
 
-                if (prefix.length > 0) {
-                    generateDotCombinations(prefix + '.' + suffix[0], suffix.substring(1));
-                }
-            }
+              //  if (prefix.length > 0) {
+              //      generateDotCombinations(prefix + '.' + suffix[0], suffix.substring(1));
+              //  }
+          //  }
 
-            if (cleanUsername.length > 0) {
-                generateDotCombinations(cleanUsername[0], cleanUsername.substring(1));
-            }
+         //   if (cleanUsername.length > 0) {
+           //     generateDotCombinations(cleanUsername[0], cleanUsername.substring(1));
+          //  }
 
-            return Array.from(generatedEmails).sort();
-        }
+         //   return Array.from(generatedEmails).sort();
+       // }
 
         // Show message box
         function showMessage(message) {
