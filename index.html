@@ -320,11 +320,11 @@
             const generatedEmails = new Set();
             const cleanUsername = baseUsername.replace(/\./g, '').toLowerCase();
 
-            //function generateDotCombinations(prefix, suffix) {
-                //if (suffix.length === 0) {
-                    //generatedEmails.add(`${prefix}@${domain}`);
-                    //return;
-                //}
+            function generateDotCombinations(prefix, suffix) {
+                if (suffix.length === 0) {
+                    generatedEmails.add(`${prefix}@${domain}`);
+                    return;
+                }
 
                 //generateDotCombinations(prefix + suffix[0], suffix.substring(1));
 
